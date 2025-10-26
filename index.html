@@ -1,11 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Smith | Dentist</title>
-    <meta name="description" content="Professional dental care and a brighter smile. Book your appointment with Dr. Smith today!" />
-    <link rel="stylesheet" href="/src/styles/global.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>AI Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>html,body,#root{height:100%}</style>
+    <script>
+      window.addEventListener('error', e => {
+        const m = (e && e.message) ? e.message : 'Unknown error';
+        const div = document.createElement('div');
+        div.style.cssText='position:fixed;bottom:8px;left:8px;background:#fee;border:1px solid #f99;padding:8px 10px;border-radius:8px;font:12px/1.4 system-ui;color:#900;max-width:80vw;z-index:99999';
+        div.textContent='Runtime error: '+m;
+        document.body.appendChild(div);
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
